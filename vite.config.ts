@@ -32,6 +32,7 @@ export default defineConfig(({ command }) => {
               sourcemap,
               minify: isBuild,
               outDir: 'dist-electron/main',
+              assetsDir: "assets",
               rollupOptions: {
                 external: Object.keys('dependencies' in pkg ? pkg.dependencies : {}),
               },

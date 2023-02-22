@@ -6,7 +6,6 @@
                  @open="handleOpen"
                  @close="handleClose"
                  :default-openeds="opened"
-                 :default-active="$router.path"
         >
           <el-sub-menu index="1">
             <template #title>
@@ -29,25 +28,47 @@
 
 <script lang="ts" setup>
 import {
-  Document,
-  Menu as IconMenu,
   Location,
-  Setting,
 } from '@element-plus/icons-vue'
 
 const handleOpen = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
 }
 const handleClose = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
 }
+
+
 </script>
 <script lang="ts">
+
+import * as child_process from "child_process";
+import {Action, ElMessage, ElMessageBox} from "element-plus";
+import {ipcRenderer} from "electron";
+
+const remote = require('electron').remote
 
 export default {
   data() {
     return {
-      opened: ['1']
+      opened: ['1'],
+    }
+  },
+  mounted() {
+    let isElevated;
+    try {
+      child_process.execFileSync("net", ["session"], {"stdio": "ignore"});
+      isElevated = true;
+    } catch (e) {
+      isElevated = false;
+    }
+    if (!isElevated) {
+      ElMessageBox.alert('本应用涉及到注册表的修改，因此必须以管理员身份启动。请重新打开本程序（右键-以管理员身份运行）', '警告', {
+        confirmButtonText: '退出',
+        closeOnClickModal: false,
+        closeOnPressEscape: false,
+        callback: () => {
+          ipcRenderer.send('closeApp')
+        }
+      })
     }
   }
 }
