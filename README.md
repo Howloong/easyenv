@@ -1,23 +1,19 @@
 # electron-vite-vue
 
-🥳 Really simple `Electron` + `Vue` + `Vite` boilerplate.
+一个使用electron-vite-vue框架搭建的环境自动配置工具。
 
-<!-- [![awesome-vite](https://awesome.re/mentioned-badge.svg)](https://github.com/vitejs/awesome-vite) -->
-<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/ae3863e3-1aec-4eb1-8f9f-1890af56929d/deploy-status)](https://app.netlify.com/sites/electron-vite/deploys) -->
-<!-- [![GitHub license](https://img.shields.io/github/license/caoxiemeihao/electron-vite-vue)](https://github.com/electron-vite/electron-vite-vue/blob/main/LICENSE) -->
-<!-- [![GitHub stars](https://img.shields.io/github/stars/caoxiemeihao/electron-vite-vue?color=fa6470)](https://github.com/electron-vite/electron-vite-vue) -->
-<!-- [![GitHub forks](https://img.shields.io/github/forks/caoxiemeihao/electron-vite-vue)](https://github.com/electron-vite/electron-vite-vue) -->
-[![GitHub Build](https://github.com/electron-vite/electron-vite-vue/actions/workflows/build.yml/badge.svg)](https://github.com/electron-vite/electron-vite-vue/actions/workflows/build.yml)
-[![GitHub Discord](https://img.shields.io/badge/chat-discord-blue?logo=discord)](https://discord.gg/sRqjYpEAUK)
+[![wakatime](https://wakatime.com/badge/user/dac2f0d8-0f5d-443b-97cb-75004ad8cc1d/project/d87438aa-0839-4db7-a5da-8faccb88db7f.svg)](https://wakatime.com/badge/user/dac2f0d8-0f5d-443b-97cb-75004ad8cc1d/project/d87438aa-0839-4db7-a5da-8faccb88db7f)
 
 ## Features
 
 📦 Out of the box  
-🎯 Based on the official [template-vue-ts](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-vue-ts), less invasive  
+🎯 Based on the
+official [template-vue-ts](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-vue-ts), less
+invasive  
 🌱 Extensible, really simple directory structure  
 💪 Support using Node.js API in Electron-Renderer  
 🔩 Support C/C++ native addons  
-🖥 It's easy to implement multiple windows  
+🖥 It's easy to implement multiple windows
 
 ## Quick Start
 
@@ -50,7 +46,8 @@ npm create electron-vite
 
 ## Be aware
 
-🚨 By default, this template integrates Node.js in the Renderer process. If you don't need it, you just remove the option below. [Because it will modify the default config of Vite](https://github.com/electron-vite/vite-plugin-electron-renderer#config-presets-opinionated).
+🚨 By default, this template integrates Node.js in the Renderer process. If you don't need it, you just remove the option
+below. [Because it will modify the default config of Vite](https://github.com/electron-vite/vite-plugin-electron-renderer#config-presets-opinionated).
 
 ```diff
 # vite.config.ts

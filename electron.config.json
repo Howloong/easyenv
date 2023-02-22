@@ -1,4 +1,0 @@
-{
-  "files": ["./electron/main/index.js", "./electron/preload/index.js", "./dist"],
-  "productName": "test"
-}
